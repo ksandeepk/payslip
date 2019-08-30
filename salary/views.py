@@ -167,13 +167,3 @@ def detid(request):
                 userid=request.POST["id"]
                 esal.objects.filter(E_id=userid).delete()
                 return render(request,'delete.html')
-def ulog(request):
-    if request.method=="POST":
-        email=request.POST['email']
-        password=request.POST['psd']
-        lp=booking.objects.get(email=email,password=password)
-        if lp:
-            return render(request,'udash.html')
-        else:
-            return HttpResponse("check details") 
-    return render(request,'ulog.html')                
