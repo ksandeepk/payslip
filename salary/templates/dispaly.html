@@ -1,0 +1,45 @@
+
+
+<table width="5px" border="1">
+    <tr>
+        <th>E_id</th>
+        <th>Designation</th>
+        <th>Basic</th>
+        <th>TA</th>
+        <th>DA</th>
+        <th>HRA</th>
+        <th>Special_allowance</th>
+        <th style="color:orange;">Gross_Sal</th>
+        <th style="color:red";> ESI</th>
+        <th style="color:red";> PF</th>
+        <th style="color:red";> Insurence</th>
+        <th style="color:red";> Pension</th>
+        <th style="color:red";> lop</th><br>
+        <th style="color:green;">Net_Sal</th></b>
+        <th>leaves_taken</th>
+    </tr>
+    {% for d in user %}
+    <tr>
+
+        <td>{{d.E_id}}</td>
+        <td>{{d.designation}}</td>
+        <td>{{d.Basic}}</td>
+        <td>{{d.TA}}</td>
+        <td>{{d.DA}}</td>
+        <td>{{d.HRA}}</td>
+        <td>{{d.Special_allowance}}</td>
+        <td>{{d.Gross_Sal}}</td>
+        <td>{{d.ESI}}</td>
+        <td>{{d.PF}}</td>
+        <td>{{d.Pension}}</td>
+        <td>{{d.Insurence}}</td>
+        <td>{{d.lop}}</td>
+
+        <td>{{d.Net_Sal}}</td>
+
+        
+        <td>{{d.leaves_taken}}</td>
+    </tr>
+
+{% endfor %}
+</table>
